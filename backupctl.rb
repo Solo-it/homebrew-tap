@@ -5,21 +5,21 @@
 class Backupctl < Formula
   desc "CLI tool for setting up restic-based database backups"
   homepage "https://github.com/Solo-it/backupctl"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.0/backupctl_1.0.0_darwin_amd64.tar.gz"
-      sha256 "fc17e695c6cb872a6110be10830291c1dc331ec34e84a32237a30c09d80cce8d"
+      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.1/backupctl_1.0.1_darwin_amd64.tar.gz"
+      sha256 "adaa8b4b647d0f7f69bea2ac77e77ea712b27200337cb82ed3fa7654d798dd15"
 
       define_method(:install) do
         bin.install "backupctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.0/backupctl_1.0.0_darwin_arm64.tar.gz"
-      sha256 "ed0fb2cdc805d7bea8d3760513961ee3901d8952b417946e145e15a7687e34c3"
+      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.1/backupctl_1.0.1_darwin_arm64.tar.gz"
+      sha256 "1a21deab207341eb473bcac569cf42d13deeae8b03f4f5fc8ee7f86c3d1ab253"
 
       define_method(:install) do
         bin.install "backupctl"
@@ -29,15 +29,15 @@ class Backupctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.0/backupctl_1.0.0_linux_amd64.tar.gz"
-      sha256 "4b05aebb16bb23f1b6f66af02aabe594608a72260d1f2a6ba8004150dfbc5400"
+      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.1/backupctl_1.0.1_linux_amd64.tar.gz"
+      sha256 "c1604dbde283ca0bc01a8a17da5d92c22eb5f8438c5c904472d9a05510bfcdd6"
       define_method(:install) do
         bin.install "backupctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.0/backupctl_1.0.0_linux_arm64.tar.gz"
-      sha256 "4dfcbefe67f62103edd1838b05bcf40dbde84308ea5ea132c7d8ceb4d2a0fd1d"
+      url "https://github.com/Solo-it/backupctl/releases/download/v1.0.1/backupctl_1.0.1_linux_arm64.tar.gz"
+      sha256 "31bcc0c16f2c96c5fe793bb1815d47c898b0858f30450b60faf638a1600f00aa"
       define_method(:install) do
         bin.install "backupctl"
       end
